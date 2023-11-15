@@ -22,7 +22,7 @@ sudo systemctl start jenkins
 # Activation du démarrage automatique au démarrage du système
 sudo systemctl enable jenkins
 
-# Attente que Jenkins démarre complètement (ajustez selon vos besoins)
+# Attente que Jenkins démarre complètement
 sleep 30
 
 # Récupération du mot de passe administrateur généré par Jenkins
@@ -35,6 +35,7 @@ casc_file="/var/lib/jenkins/casc_configs/jenkins.yaml"
 sudo mkdir -p /var/lib/jenkins/casc_configs
 sudo chown -R jenkins:jenkins /var/lib/jenkins/casc_configs
 
+#On rentre le mot de passe demandé par l'interface Web
 cat <<EOF | sudo tee $casc_file
 jenkins:
   securityRealm:
