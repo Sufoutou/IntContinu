@@ -14,7 +14,7 @@ echo deb http://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources
 sudo apt update
 
 # Installation de Jenkins
-sudo apt install -y jenkins
+sudo apt install jenkins
 
 # Démarrage du service Jenkins
 sudo systemctl start jenkins
